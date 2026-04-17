@@ -1,0 +1,145 @@
+:root{
+    --fondo: #202020;
+    --headerColor: #3B3B3B;
+    --fontColor: #FFFAFA;
+}
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    
+}
+.none{
+    display: none !important;
+}
+body{
+    background-color: var(--fondo);
+    height: 100%;
+    width: 100%;
+}
+header{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+header div{
+    width: 600px;
+    height: 100%;
+    background-color: var(--headerColor);
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header div h1{
+    font-family: Gabarito;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: var(--fontColor);
+    font-size: 36px;
+}
+.main__section{
+    width: 420px;
+    position: absolute;
+}
+.main__section-div{
+    background-color: var(--headerColor);
+    height: 600px;
+    width: 85px;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    img{
+        height: 55px;
+        width: 55px;
+    }
+}
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background: #ffffff;
+  color: #000;
+}
+
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+/* BOTÓN VERTICAL */
+.theme-toggle {
+  width: 42px;
+  height: 119px;
+  background: #ccc;
+  border-radius: 40px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+
+.theme-container{
+  width: 60px;
+  height: 152px;
+  background-color: #202020;
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  flex-direction: row-reverse
+}
+
+.seniales-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.theme-containerr{
+  display: flex;
+  flex-direction: row-reverse;
+}
+/* CÍRCULO */
+/* .theme-toggle::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  transition: transform 0.3s;
+}
+
+/* ESTADO OSCURO (se mueve hacia abajo) 
+body.dark .theme-toggle {
+  background: #333;
+}
+
+body.dark .theme-toggle::before {
+  transform: translateY(40px);
+} */
+
+/* ICONOS */
+.icon {
+  font-size: 16px;
+  z-index: 1;
+}
