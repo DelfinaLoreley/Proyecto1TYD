@@ -20,9 +20,11 @@
 }
 body{
   background-color: var(--fondo);
-  background-image: url(../assets/fondo-modo-oscuro.png);
-  height: 100%;
-  width: 100%;
+  background-image: url("../assets/fondo-modo-oscuro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
 }
 header{
   height: 75px;
