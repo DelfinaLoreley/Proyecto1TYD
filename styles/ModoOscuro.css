@@ -25,7 +25,20 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh; 
+   margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
 }
+body.light {
+  background: #ffffff;
+  color: #000;
+}
+
+body.dark {
+  background-image: "../assets/fondo-modo-oscuro.png";
+  color: #fff;
+}
+
 header{
   height: 75px;
   width: 100%;
@@ -51,6 +64,7 @@ header div h1{
   color: var(--fontColor);
   font-size: 36px;
 }
+
 .main__section{
   width: 420px;
   position: absolute;
@@ -72,26 +86,11 @@ header div h1{
   }
 }
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-  transition: background 0.3s, color 0.3s;
-}
-
-body.light {
-  background: #ffffff;
-  color: #000;
-}
-
-body.dark {
-  background-image: "../assets/fondo-modo-oscuro.png";
-  color: #fff;
-}
 
 /* BOTÓN DE TEMAS-------------------- -------*/
 .theme-toggle {
-  width: 42px;
-  height: 119px;
+  width: 40px;
+  height: 109px;
   background: #ccc;
   border-radius: 40px;
   position: relative;
@@ -104,41 +103,36 @@ body.dark {
   margin-top: 15px;
   margin-right: 6px;
   box-shadow:
-    inset 0 5px 10px rgba(0,0,0,0.2),
-    inset 0 -5px 10px rgba(141, 138, 138, 0.6),
-    0 10px 20px rgba(0,0,0,0.4); 
+    inset 0 5px 10px rgba(0, 0, 0, 0.459),
+    inset 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .theme-container{
   display: flex;
-  width: 60px;
-  height: 152px;
+  width: 55px;
+  height: 142px;
   background-color: var(--headerColor);
   border-radius: 15px 0px 0px 15px;
   flex-direction: row-reverse;
-  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.274);
+  box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.404);
   position: absolute;
 }
 
 .switch{
-  width: 38px;
-  height: 60px;
+  width: 35px;
+  height: 50px;
   background-color: #6C6C6C;
-  /*background: linear-gradient(180deg, #bdbdbd, #dcdcdc);*/
+  color: var(--fontColor);
   border-radius: 40px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding: 8px;
+  margin-bottom: -11px;
   /* position: fixed;
   transform: translateY(45%); */
-
-  /* sombra interna */
-  box-shadow:
-    inset 0 4px 8px rgba(0, 0, 0, 0.384),
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.61);
 }
-
-
 
 
 /* CONTENEDOR DE SEÑALES---------------------------------------*/
@@ -177,8 +171,6 @@ body.dark {
   font-size: 16px;
   z-index: 1;
 }
-
-
 
 /*PARTE FOOTER------------------*/
 footer {
@@ -232,6 +224,7 @@ footer {
 .footer-right {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   font-size: 18px;
   opacity: 0.8;
   color: #A8A6A6;
