@@ -257,8 +257,8 @@ main{
   margin-right: 40px;
   margin-left: 40px; 
   padding: 20px;
-  width: 180px;
-  height: 180px;
+  width: 11.5vw;
+  height: 11.5vw;
 }
 .seniales-container div img {
   width: 100%;
@@ -335,4 +335,13 @@ footer {
   font-family: monospace;
   justify-content: end;
   height: 20vh;
+}
+
+
+
+@media (min-width: 768px) {
+  .item {
+    width: 50%;
+    background: blue;
+  }
 }
