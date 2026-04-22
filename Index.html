@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+        <script defer src="scrips/Filtrado.js"></script>
     </head>
     <body>
         <header>
@@ -21,28 +22,56 @@
         <main>
             <section class="main__section">
                 <div class="main__section-div">
-                    <div>
+                    <div class="cosoblanco cosopos">
+
+                    </div>
+                    <div class="senialestext">
+                        <h2>Señales</h2>
+                    </div>
+                    <div class="item" onclick="filtrado(0)">
                         <br>
                         <img src="assets/señalfiltro.png" alt="">
+                        <div>
+                            <h2>todos</h2>
+                        </div>
                     </div>
-                    <div>
-                        <img src="assets/Señal1.png" alt="">
+                    <div class="item"onclick="filtrado(1)">
+                        <img src="assets/Señal1.png" alt="" >
+                        <div>
+                            <h2>Prioridad</h2>
+                        </div>
                     </div>
-                    <div>
+                    <div class="item"  onclick="filtrado(2)">
                         <img src="assets/Señal2.png" alt="">
+                        <div>
+                            <h2>Prohibicion de entrada</h2>
+                        </div>
                     </div>
-                    <div>
+                    <div class="item"  onclick="filtrado(3)">
                         <img src="assets/Señal3.png" alt="">
+                        <div>
+                            <h2>Restriccion de paso</h2>
+                        </div>
                     </div>
-                    <div>
-                        <img src="assets/Señal4.png" alt="">
+                    <div class="item" onclick="filtrado(4)">
+                        <img src="assets/Señal4.png" alt="" >
+                        <div>
+                            <h2>Prohibiion o restriccion</h2>
+                        </div>
                     </div>
-                    <div>
-                        <img src="assets/Señal5.png" alt="">
+                    <div class="item" onclick="filtrado(5)">
+                        <img src="assets/Señal5.png" alt="" >
+                        <div>
+                            <h2>Obligacion</h2>
+                        </div>
                     </div>
-                    <div>
-                        <img src="assets/Señal6.png" alt="">
+                    <div class="item" onclick="filtrado(6)">
+                        <img src="assets/Señal6.png" alt="" >
+                        <div>
+                            <h2>Fin de la prohibicion</h2>
+                        </div>
                     </div>
+                    
                 </div>
             </section>
             <section class="theme-containerr">
@@ -55,66 +84,66 @@
                     </div>
                 </div>
             </section>
-            <section class="seniales-container">
-                <div>
-                    <img src="assets/SeñalTriangulo.png">
+            <section class="seniales-container" id="contenedorDeSeniales">
+                <div data-tipo="1">
+                    <img src="assets/SeñalTriangulo.png"  class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalSTOP.png">
+                <div  data-tipo="1">
+                    <img src="assets/SeñalSTOP.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalCruzRojaAzul.png">
+                <div  data-tipo="4">
+                    <img src="assets/SeñalCruzRojaAzul.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalContramano.png">
+                <div  data-tipo="2">
+                    <img src="assets/SeñalContramano.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalFlechaDerecha.png"></img>
+                <div  data-tipo="5">
+                    <img src="assets/SeñalFlechaDerecha.png" class="señale"></img>
                 </div>
-                <div>
-                    <img src="assets/SeñalTresPalitos.png">
+                <div data-tipo="5">
+                    <img src="assets/SeñalTresPalitos.png"  class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalPeaton.png">
+                <div  data-tipo="2">
+                    <img src="assets/SeñalPeaton.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalDosFlechas.png">
+                <div  data-tipo="1">
+                    <img src="assets/SeñalDosFlechas.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalLucesBajas.png">
+                <div  data-tipo="5">
+                    <img src="assets/SeñalLucesBajas.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalContramano2.png">
+                <div data-tipo="3">
+                    <img src="assets/SeñalContramano2.png"  class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalLineaDiagonal.png">
+                <div  data-tipo="4">
+                    <img src="assets/SeñalLineaDiagonal.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalTren.png">
+                <div  data-tipo="2">
+                    <img src="assets/SeñalTren.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalAutoBici.png">
+                <div data-tipo="2">
+                    <img src="assets/SeñalAutoBici.png"  class="señale">
                 </div>
-                <div>
-                    <img src="assets/Señal2Autos.png">
+                <div  data-tipo="6">
+                    <img src="assets/Señal2Autos.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/Señal60Minima.png">
+                <div  data-tipo="6">
+                    <img src="assets/Señal60Minima.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/Señal4.2m.png">
+                <div  data-tipo="3">
+                    <img src="assets/Señal4.2m.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/Señal5.5t.png">
+                <div  data-tipo="3">
+                    <img src="assets/Señal5.5t.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/Señal100.png">
+                <div  data-tipo="4">
+                    <img src="assets/Señal100.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/Señal2AutosRoja.png">
+                <div  data-tipo="4">
+                    <img src="assets/Señal2AutosRoja.png" class="señale">
                 </div>
-                <div>
-                    <img src="assets/SeñalBici.png">
+                <div data-tipo="6">
+                    <img src="assets/SeñalBici.png"  class="señale">
                 </div>
             </section>
         </main>

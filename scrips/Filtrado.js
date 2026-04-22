@@ -1,10 +1,14 @@
-filtrado()
-function filtrado(cate) {
-  const elementos = document.querySelectorAll('.item');
-  console.log(elementos)
-  const ids = Array.from(elementos)
-    .filter(el => Number(el.dataset.tipo) === cate)
-    .map(el => el.id);
-  console.log(ids)
-  return ids;
+function filtrado(cate){
+  const contenedor = document.getElementById("contenedorDeSeniales");
+  const hijos = contenedor.children;
+
+  for (let hijo of hijos) {
+    const tipo = Number(hijo.dataset.tipo);
+
+    if (Number(cate) == 0 || tipo === Number(cate)) {
+      hijo.style.display = "block"; // mostrar
+    } else {
+      hijo.style.display = "none"; // ocultar
+    }
+  }
 }
