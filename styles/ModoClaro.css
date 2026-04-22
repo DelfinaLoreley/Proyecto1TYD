@@ -1,0 +1,234 @@
+/*IMPORTACIÓN DE FONTS-------*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*ESTILOS GENERALES-----------*/
+:root{
+  --fondo: #a9a9a9;
+  --fontColor: #FFFAFA;
+}
+*{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  margin: 0;
+}
+.none{
+  display: none !important;
+}
+body{
+  background-color: var(--fondo);
+  background-image: url("../assets/fondo-modo-claro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+   margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+body.light {
+  background: #ffffff;
+  color: #000;
+}
+
+body.dark {
+  background-image: "../assets/fondo-modo-claro.png";
+  color: #fff;
+}
+
+header{
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;  
+}
+header div{
+  width: 600px;
+  height: 100%;
+  background: linear-gradient(to right, #ED7A12, #1285ED);
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.541);
+}
+header div h1{
+  font-family: Gabarito;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: var(--fontColor);
+  font-size: 36px;
+}
+
+.main__section{
+  width: 420px;
+  position: absolute;
+}
+.main__section-div{
+  background: linear-gradient(to bottom, #ED7A12, #1285ED);
+  height: 600px;
+  width: 85px;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.541);
+    
+  img{
+    height: 55px;
+    width: 55px;
+  }
+}
+
+
+/* BOTÓN DE TEMAS-------------------- -------*/
+.theme-toggle {
+  width: 40px;
+  height: 109px;
+  background: #ccc;
+  border-radius: 40px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+  margin-top: 15px;
+  margin-right: 6px;
+  box-shadow:
+    inset 0 5px 10px rgba(0, 0, 0, 0.459),
+    inset 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.theme-container{
+  display: flex;
+  width: 55px;
+  height: 142px;
+  background: linear-gradient(to bottom, #ED7A12, #1285ED);
+  border-radius: 15px 0px 0px 15px;
+  flex-direction: row-reverse;
+  box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.404);
+  position: absolute;
+}
+
+.switch{
+  width: 35px;
+  height: 50px;
+  background-color: #6C6C6C;
+  color: var(--fontColor);
+  border-radius: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: -11px;
+  /* position: fixed;
+  transform: translateY(45%); */
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.61);
+}
+
+
+/* CONTENEDOR DE SEÑALES---------------------------------------*/
+.seniales-container{
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(4, auto);
+  justify-content: center;
+  align-items: center;
+}
+.seniales-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-right: 40px;
+  margin-left: 40px; 
+  padding: 20px;
+  width: 180px;
+  height: 180px;
+}
+.seniales-container div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.theme-containerr{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* ICONOS  DEL BOTON TEMAS*/
+.icon {
+  font-size: 16px;
+  z-index: 1;
+}
+
+/*PARTE FOOTER------------------*/
+footer {
+  background: linear-gradient(to right, #0273DB, #5353FF);
+  color: #ffffff;
+  padding: 15px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* NOMBRE DEL GRUPO */
+.footer-left .brand {
+  font-size: 22px;
+  font-family: Noto Sans;
+}
+
+/* INFO Y LOGOS */
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-center .icon2 {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.footer-text .title {
+  margin: 0;
+  font-family: serif;
+  font-size: 24px;
+}
+.footer-text .subtitle {
+  margin: 0;
+  font-size: 24px;
+  font-family: serif;
+}
+
+/*PARTE DERECHOS RESERVADOS*/
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 18px;
+  opacity: 0.8;
+  color: #A8A6A6;
+  font-family: monospace;
+  justify-content: end;
+  height: 20vh;
+}
+
