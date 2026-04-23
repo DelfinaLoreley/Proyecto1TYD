@@ -1,3 +1,15 @@
+const menuo = document.getElementById("menu")
+setInterval(() => {
+  if (window.innerWidth > 850) {
+    menuo.classList.remove("none") 
+  }
+}, 1000);
+function mosocu(){
+  const menu = document.getElementById("menu")
+  menu.classList.toggle("mostrar")
+  menu.classList.toggle("none")
+}
+
 function filtrado(cate, element){
   const contenedor = document.getElementById("contenedorDeSeniales");
   const hijos = contenedor.children;
@@ -13,13 +25,15 @@ function filtrado(cate, element){
   }
   cambio(cate, element)
 }
+
 function cambio(num,e){
   const coso = document.getElementById("cosoblanco")
   const img = e.querySelector("img");
   const titulo = e.querySelector("h2");
   const posiciones =[29,105,191,271,353,433,517]
+  const posicionesCelular = [19,109,195,280,363,446,530]
   const items = document.querySelectorAll(".item");
-
+  const ayuda = document.getElementById("ayuda")
   for (let i = 0; i <= 6; i++) {
     if (i === num) continue;
 
@@ -33,7 +47,15 @@ function cambio(num,e){
       titulo.style.color = "var(--fontColor)";
     }
   }
-  coso.style.transform = `translateY(${posiciones[num]}px)`;
+  if (window.innerWidth < 851) {
+    coso.style.transform = `translateY(${posicionesCelular[num]}px)`;
+    mosocu()
+    ayuda.src = `assets/color${num}.png`
+  }
+  else{
+    coso.style.transform = `translateY(${posiciones[num]}px)`;
+  }
+  
   img.src = `assets/color${num}.png`
   titulo.style.color = "red";
 }
