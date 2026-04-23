@@ -259,9 +259,9 @@ footer {
 
 @keyframes rebote {
   0%   { transform: scale(1); }
-  30%  { transform: scale(1.2); }  /* crece */
-  70%  { transform: scale(0.8); }  /* se achica más */
-  100% { transform: scale(1); }    /* vuelve normal */
+  30%  { transform: scale(1.2); }  
+  70%  { transform: scale(0.8); }
+  100% { transform: scale(1); }  
 }
 
 @keyframes desaparecer {
